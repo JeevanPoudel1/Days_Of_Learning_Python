@@ -79,3 +79,8 @@ print("z_listcontains %d objects" % len(z_list))
 print("x_listcontains %d objects" % len(x_list))
 print("y_listcontains %d objects" % len(y_list))
 print("big_listcontains %d objects" % len(big_list))   
+
+data = ("John", "Doe", 53.44)
+format_string = "Hello %s %s. Your current balance is $%s."
+
+print(format_string % data)
