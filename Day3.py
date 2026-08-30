@@ -3,6 +3,9 @@ String Manipulation in Python
 """
 
 
+from ast import For
+
+
 astring = "hello world"
 print(astring[0:5])  # Output: hello
 print(len(astring))  # Output: 11
@@ -114,3 +117,39 @@ elif len(second_array) == 3: #prints(4) because the length of second_array is 3
 
 if len(first_array) + len(second_array) == 5  or len(first_array) + len(second_array) == 23: 
     print("4")#prints(4) because the length of first_array is 20 and second_array is 3
+
+
+#Loops
+"""
+There are two types of loops in Python, for and while.
+"""
+
+#prints 0,1,2,3,4
+for x in range(5):
+    print(x)
+
+#range(start, stop, step)
+"""
+First loop: x starts at 3. It prints 3.
+
+Second loop: Python adds the 
+step of 2 ((3 + 2 = 5)). x becomes 5. It prints 5.
+
+Third loop: Python adds the step of 2 ((5 + 2 = 7)). x becomes 7.
+It prints 7.Fourth loop: Python adds the step of 2 ((7 + 2 = 9)). 
+Because 9 is equal to or great
+"""
+for x in range(3,8,2):
+    print(x) 
+#prints 3,5,7
+
+num =0
+while num < 5:
+    print(num)
+    num = num + 1 
+
+count = 0
+while (count < 5):
+    print(count)
+    count += 1      #this is the same as count = count + 1
+
