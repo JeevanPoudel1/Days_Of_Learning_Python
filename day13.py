@@ -1,5 +1,5 @@
 # Simple Terminal Calculator
-print("       PYTHON CALCULATOR")
+print("PYTHON CALCULATOR")
 
 
 while True:
