@@ -1,2 +1,3 @@
 Bibek Bishwokarma,23
 hridesh Bhattarai,22
+jeevan,9,90,chemistry
