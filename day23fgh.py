@@ -26,17 +26,17 @@ apple()
 '''
 
 def getting_val():
-    x =get_int()
+    x =get_int("enter value: ")
     print(f"x is {x}")
 
 
 
 
 
-def get_int():
+def get_int(prompt):
     while True:
         try:
-            x= int(input("enter value: "))
+            x= int(input(prompt))
         
         except ValueError:
             print("x is not integer")
