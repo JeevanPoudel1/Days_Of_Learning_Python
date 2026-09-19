@@ -15,7 +15,7 @@ elif x>y:
 else:
     print("x and y is equal")
 
-
+'''
 def main():
     z = int(input("what's z?"))
     if is_even(x):
@@ -30,7 +30,7 @@ def is_even(n):
         return False
 
 main()
-
+'''
 
 
 name_a = input("what's your name")
