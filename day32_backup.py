@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -14,13 +15,19 @@ iris = load_iris()
 
 
 # ==========================================
-# 2. DISPLAY IRIS DATASET
+# 2. CREATE PANDAS DATAFRAME
 # ==========================================
 
-df = iris.data
+df = pd.DataFrame(
+    iris.data,
+    columns=iris.feature_names
+)
+
+df["species"] = iris.target
+
 
 print("\n===== IRIS DATASET =====")
-print(df[:5])
+print(df.head())
 
 print("\nDataset Shape:")
 print(df.shape)
@@ -58,6 +65,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     test_size=0.2,
     random_state=42
 )
+
 
 print("\n===== DATA SPLIT =====")
 
@@ -104,13 +112,13 @@ print(f"Model Accuracy: {accuracy * 100:.2f}%")
 # 9. COMPARE ACTUAL VS PREDICTED
 # ==========================================
 
-result = list(zip(y_test, predictions))
+result = pd.DataFrame({
+    "Actual": y_test,
+    "Predicted": predictions
+})
 
 print("\n===== PREDICTIONS =====")
-print("Actual | Predicted")
-
-for actual, predicted in result:
-    print(f"{actual:^6} | {predicted:^9}")
+print(result)
 
 
 # ==========================================
