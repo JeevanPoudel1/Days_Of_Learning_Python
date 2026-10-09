@@ -1,6 +1,6 @@
 import pandas as pd
 df = pd.read_csv('pokemon.csv', index_col='Name')
-'''
+
 
 pokemon = input("Enter the name of the Pokemon: ")
 
@@ -25,4 +25,10 @@ print(heavy_pokemon)
 legendary_pokemon = df[df['Legendary'] == True]
 print(legendary_pokemon)
 
-'''
+attack_health = df[(df['Attack'] > 100) & (df['HP'] > 100)]
+print(attack_health)
+
+ff_pokemon = df[(df['Type 1'] == 'Fire') & (df['Type 2'] == 'Flying')]
+print(ff_pokemon)
+
+
