@@ -31,5 +31,22 @@ print(series2[series2 <= 400])  # Filtering elements based on a condition
 data = {"Name": ["Alice", "Bob", "Charlie", "David", "Eva"],
         "Age": [25, 30, 35, 40, 45]}
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data, index=["Employee 1", "Employee 2", "Employee 3", "Employee 4", "Employee 5"])
+print(df.loc["Employee 3"])  # Accessing a specific row using label
+
+print(df.iloc[2])  # Accessing a specific row using integer position
+
+
+#adding a new column to the DataFrame
+df["Department"] = ["HR", "Finance", "IT", "Marketing", "Sales"]
+print(df)
+
+# adding a new row to the DataFrame
+new_row = pd.DataFrame({"Name": ["Frank"], "Age": [50], "Department": ["Operations"]}, index=["Employee 6"])
+df = pd.concat([df, new_row])
+print(df)
+
+#adding multiple new rows to the DataFrame
+new_rows = pd.DataFrame({"Name": ["Grace", "Hannah"], "Age": [28, 32], "Department": ["Legal", "R&D"]}, index=["Employee 7", "Employee 8"])
+df = pd.concat([df, new_rows])
 print(df)
